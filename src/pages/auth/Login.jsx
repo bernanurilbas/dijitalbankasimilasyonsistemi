@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { authStart, loginSuccess, authFailure, clearError } from '../../store/slices/authSlice';
+import api from '../../services/api';
+import LoginForm from '../../components/auth/LoginForm';
 import { Shield } from 'lucide-react';
 
 const Login = () => {
@@ -14,41 +16,16 @@ const Login = () => {
     setLocalError('');
     dispatch(clearError());
     dispatch(authStart());
-
+    
     try {
-      // 1. Kendi sunucumuz yerine public/db.json dosyasını fetch ediyoruz
-      const response = await fetch('/db.json');
-      if (!response.ok) {
-        throw new Error('Veri tabanına erişilemedi.');
-      }
-      const data = await response.json();
-
-      // 2. db.json içerisindeki users veya users dizisinden kullanıcıyı eşleştiriyoruz
-      // db.json yapına göre data.users veya doğrudan data kullanılabilir.
-      const usersList = data.users || [];
-      const user = usersList.find(
-        (u) => u.username === credentials.username && u.password === credentials.password
-      );
-
-      if (!user) {
-        throw new Error('Kullanıcı adı veya şifre hatalı!');
-      }
-
-      // 3. Redux state'ine göndermek için sunucunun döndüğü yapıya benzer bir obje hazırlıyoruz
-      const loginData = {
-        user: {
-          id: user.id,
-          username: user.username,
-          name: user.name || user.username,
-          role: user.role,
-          email: user.email || ''
-        },
-        token: "mock-jwt-token-for-vercel" // Giriş durumunu korumak için geçici bir token
-      };
-
-      dispatch(loginSuccess(loginData));
-
-      const role = user.role;
+      const response = await api.post('/api/auth/login', {
+        username: credentials.username,
+        password: credentials.password
+      });
+      
+      dispatch(loginSuccess(response.data));
+      
+      const role = response.data.user.role;
       if (role === 'admin') {
         navigate('/admin');
       } else if (role === 'staff') {
@@ -57,7 +34,7 @@ const Login = () => {
         navigate('/dashboard');
       }
     } catch (err) {
-      const msg = err.message || 'Bir hata oluştu.';
+      const msg = err?.response?.data?.message || err.toString();
       dispatch(authFailure(msg));
       setLocalError(msg);
     }
@@ -88,7 +65,6 @@ const Login = () => {
         )}
 
         {/* Form component */}
-        {/* Not: Eski Login bileşeni içindeki formu aynen çağırıyoruz */}
         <LoginForm onSubmit={handleLoginSubmit} loading={loading} />
 
         {/* Quick Login Panel */}
@@ -122,8 +98,5 @@ const Login = () => {
     </div>
   );
 };
-
-// Alt kısımdaki LoginForm bileşenini import edebilmek için asıl dosyanın sonundaki import'u koruyoruz
-import LoginForm from '../../components/auth/LoginForm';
 
 export default Login;
