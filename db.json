@@ -1,0 +1,895 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "adminpassword",
+      "fullName": "Yönetici Hakan Kaya",
+      "email": "hakan.kaya@astrabank.com",
+      "role": "admin",
+      "phoneNumber": "0532 111 22 33",
+      "address": "Astra Genel Müdürlüğü, İstanbul",
+      "status": "active",
+      "phone": "05343025697"
+    },
+    {
+      "id": "2",
+      "username": "staff",
+      "password": "staffpassword",
+      "fullName": "Elif Demir",
+      "email": "elif.demir@astrabank.com",
+      "role": "staff",
+      "phoneNumber": "0533 444 55 66",
+      "address": "Kadıköy, İstanbul",
+      "school": "Boğaziçi Üniversitesi",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "username": "customer",
+      "password": "customerpassword",
+      "fullName": "Ahmet Yılmaz",
+      "email": "ahmet.yilmaz@email.com",
+      "role": "customer",
+      "phoneNumber": "0555 777 88 99",
+      "address": "Kadıköy, İstanbul, Türkiye",
+      "status": "active"
+    },
+    {
+      "id": "1783664755709",
+      "username": "bernailbas",
+      "password": "123456",
+      "fullName": "Berna Nur İlbaş",
+      "email": "bernanurilbas@gmail.com",
+      "role": "customer",
+      "phoneNumber": "05343042413",
+      "address": "Kağıthane/İstanbul",
+      "status": "active"
+    },
+    {
+      "id": "1784116941434",
+      "username": "nurdemir",
+      "password": "1234567",
+      "fullName": "Nur  Demir",
+      "email": "nurdemir@gmail.com",
+      "role": "customer",
+      "phoneNumber": "05326897524",
+      "address": "İstanbul/Kadıköy",
+      "status": "active"
+    },
+    {
+      "id": "1784117059383",
+      "username": "cengizkurt",
+      "password": "12345678",
+      "fullName": "Cengiz Kurt",
+      "email": "cengizkurt@gmail.com",
+      "role": "customer",
+      "phoneNumber": "05353052515",
+      "address": "Ankara/Gölbaşı",
+      "status": "active"
+    },
+    {
+      "fullName": "Arda Aydın",
+      "username": "aydinarda",
+      "email": "aydinarda@gmail.com",
+      "phoneNumber": "05353066334",
+      "password": "123456",
+      "role": "staff",
+      "status": "active",
+      "address": "Beşiktaş, İstanbul",
+      "school": "İstanbul Teknik Üniversitesi",
+      "id": "VlWTNSp"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "acc-1",
+      "userId": "3",
+      "accountNumber": "10002001",
+      "iban": "TR98 0006 2000 0000 1000 2001 01",
+      "balance": 124667.2,
+      "currency": "TRY",
+      "name": "Maaş Hesabı",
+      "createdAt": "2025-01-15T10:00:00Z"
+    },
+    {
+      "id": "acc-2",
+      "userId": "3",
+      "accountNumber": "10002002",
+      "iban": "TR98 0006 2000 0000 1000 2002 02",
+      "balance": 5250,
+      "currency": "USD",
+      "name": "Dolar Birikim",
+      "createdAt": "2025-02-10T14:30:00Z"
+    },
+    {
+      "id": "acc-3",
+      "userId": "3",
+      "accountNumber": "10002003",
+      "iban": "TR98 0006 2000 0000 1000 2003 03",
+      "balance": 1850,
+      "currency": "EUR",
+      "name": "Euro Seyahat",
+      "createdAt": "2025-03-05T09:15:00Z"
+    },
+    {
+      "id": "acc-4",
+      "userId": "3",
+      "accountNumber": "10002004",
+      "iban": "TR98 0006 2000 0000 1000 2004 04",
+      "balance": 25.5,
+      "currency": "GOLD",
+      "name": "Altın Hesabı (Gram)",
+      "createdAt": "2025-03-20T16:00:00Z"
+    },
+    {
+      "id": "acc-1783664755713",
+      "userId": "1783664755709",
+      "accountNumber": "10006870",
+      "iban": "TR98 0006 2000 0000 1000 1000 6870",
+      "balance": 5000,
+      "currency": "TRY",
+      "name": "Vadesiz Mevduat",
+      "createdAt": "2026-07-10T06:25:55.713Z"
+    },
+    {
+      "id": "acc-1784116941443",
+      "userId": "1784116941434",
+      "accountNumber": "10007861",
+      "iban": "TR98 0006 2000 0000 1000 1000 7861",
+      "balance": 5000,
+      "currency": "TRY",
+      "name": "Vadesiz Mevduat",
+      "createdAt": "2026-07-15T12:02:21.443Z"
+    },
+    {
+      "id": "acc-1784117059391",
+      "userId": "1784117059383",
+      "accountNumber": "10006567",
+      "iban": "TR98 0006 2000 0000 1000 1000 6567",
+      "balance": 5000,
+      "currency": "TRY",
+      "name": "Vadesiz Mevduat",
+      "createdAt": "2026-07-15T12:04:19.391Z"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-1",
+      "userId": "3",
+      "accountId": "acc-1",
+      "cardHolder": "AHMET YILMAZ",
+      "cardNumber": "4355 8812 3456 7890",
+      "expiryDate": "12/30",
+      "cvv": "452",
+      "type": "debit",
+      "limit": 150000,
+      "usedLimit": 0,
+      "isFrozen": false,
+      "name": "Astra Black Debit"
+    },
+    {
+      "id": "card-2",
+      "userId": "3",
+      "accountId": "acc-1",
+      "cardHolder": "AHMET YILMAZ",
+      "cardNumber": "5412 7599 8844 1122",
+      "expiryDate": "08/29",
+      "cvv": "781",
+      "type": "credit",
+      "limit": 100000,
+      "usedLimit": 24850.3,
+      "isFrozen": false,
+      "name": "Astra Gold Platinum"
+    },
+    {
+      "id": "card-3",
+      "userId": "3",
+      "accountId": "acc-1",
+      "cardHolder": "AHMET YILMAZ",
+      "cardNumber": "4505 2118 9022 3411",
+      "expiryDate": "04/28",
+      "cvv": "109",
+      "type": "virtual",
+      "limit": 5000,
+      "usedLimit": 850,
+      "isFrozen": false,
+      "name": "Sanal Kart - Alışveriş"
+    },
+    {
+      "id": "card-1783664755717",
+      "userId": "1783664755709",
+      "accountId": "acc-1783664755713",
+      "cardHolder": "BERNA NUR İLBAŞ",
+      "cardNumber": "4355 8812 3092 9688",
+      "expiryDate": "12/31",
+      "cvv": "820",
+      "type": "debit",
+      "limit": 25000,
+      "usedLimit": 0,
+      "isFrozen": false,
+      "name": "Astra Debit Card"
+    },
+    {
+      "id": "card-1784116941445",
+      "userId": "1784116941434",
+      "accountId": "acc-1784116941443",
+      "cardHolder": "NUR  DEMIR",
+      "cardNumber": "4355 8812 9916 7234",
+      "expiryDate": "12/31",
+      "cvv": "104",
+      "type": "debit",
+      "limit": 25000,
+      "usedLimit": 0,
+      "isFrozen": false,
+      "name": "Astra Debit Card"
+    },
+    {
+      "id": "card-1784117059394",
+      "userId": "1784117059383",
+      "accountId": "acc-1784117059391",
+      "cardHolder": "CENGIZ KURT",
+      "cardNumber": "4355 8812 4576 7290",
+      "expiryDate": "12/31",
+      "cvv": "927",
+      "type": "debit",
+      "limit": 25000,
+      "usedLimit": 0,
+      "isFrozen": false,
+      "name": "Astra Debit Card"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-1001",
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "transfer",
+      "amount": -1200,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "TR98 0006 2000 0000 1000 3001 01",
+      "recipientName": "Zeynep Aslan",
+      "description": "Kira payı",
+      "date": "2026-07-08T09:12:00Z",
+      "referenceNumber": "REF882910"
+    },
+    {
+      "id": "tx-1002",
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -450.2,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "EnerjiSA Elektrik",
+      "description": "Fatura Ödeme",
+      "date": "2026-07-07T14:22:00Z",
+      "referenceNumber": "REF552912"
+    },
+    {
+      "id": "tx-1003",
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "fast",
+      "amount": -250,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "TR12 0001 1000 0000 9999 8888 77",
+      "recipientName": "Mehmet Can",
+      "description": "Yemek borcu",
+      "date": "2026-07-06T18:45:00Z",
+      "referenceNumber": "REF772019"
+    },
+    {
+      "id": "tx-1004",
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "deposit",
+      "amount": 35000,
+      "currency": "TRY",
+      "senderIban": "TR11 0002 2000 0000 3333 4444 55",
+      "recipientIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientName": "Ahmet Yılmaz",
+      "description": "Maaş Ödemesi - Astra Corp",
+      "date": "2026-07-01T08:00:00Z",
+      "referenceNumber": "REF110291"
+    },
+    {
+      "id": "tx-1005",
+      "userId": "3",
+      "accountId": "acc-2",
+      "type": "investment",
+      "amount": 500,
+      "currency": "USD",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "TR98 0006 2000 0000 1000 2002 02",
+      "recipientName": "Ahmet Yılmaz (Dolar)",
+      "description": "Dolar Alışı (Kur: 32.50)",
+      "date": "2026-06-28T11:30:00Z",
+      "referenceNumber": "REF332912"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -185.5,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "İSKİ Su",
+      "description": "İSKİ Su Fatura Ödemesi",
+      "date": "2026-07-15T10:40:43.323Z",
+      "referenceNumber": "REF752228",
+      "id": "Sj98R6b"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -750,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "İGDAŞ Doğalgaz",
+      "description": "İGDAŞ Doğalgaz Fatura Ödemesi",
+      "date": "2026-07-15T10:42:58.520Z",
+      "referenceNumber": "REF582077",
+      "id": "FSXiNaf"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -299.9,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "Turkcell Ev İnterneti",
+      "description": "Turkcell Ev İnterneti Fatura Ödemesi",
+      "date": "2026-07-15T10:43:02.296Z",
+      "referenceNumber": "REF611668",
+      "id": "R2kS0C4"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -149,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "Türk Telekom Telefon",
+      "description": "Türk Telekom Telefon Fatura Ödemesi",
+      "date": "2026-07-15T10:43:09.871Z",
+      "referenceNumber": "REF828742",
+      "id": "4LUd_AJ"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "eft",
+      "amount": -5500,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "TR684649649649649613166849",
+      "recipientName": "Berna Nur İlbaş",
+      "description": "Avm",
+      "date": "2026-07-15T10:47:20.845Z",
+      "referenceNumber": "REF195891",
+      "id": "nem6yoF"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "eft",
+      "amount": -10000,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "TR505161961663661988855231",
+      "recipientName": "Nur Yılmaz",
+      "description": "Kira ",
+      "date": "2026-07-15T11:10:51.032Z",
+      "referenceNumber": "REF516718",
+      "id": "0_8w-ap"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -750,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "İGDAŞ Doğalgaz",
+      "description": "İGDAŞ Doğalgaz Fatura Ödemesi",
+      "date": "2026-07-15T16:13:57.033Z",
+      "referenceNumber": "REF182438",
+      "id": "XjbvIa4"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -299.9,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "Turkcell Ev İnterneti",
+      "description": "Turkcell Ev İnterneti Fatura Ödemesi",
+      "date": "2026-07-15T16:14:04.388Z",
+      "referenceNumber": "REF488252",
+      "id": "KQslb-L"
+    },
+    {
+      "userId": "3",
+      "accountId": "acc-1",
+      "type": "bill",
+      "amount": -149,
+      "currency": "TRY",
+      "senderIban": "TR98 0006 2000 0000 1000 2001 01",
+      "recipientIban": "-",
+      "recipientName": "Türk Telekom Telefon",
+      "description": "Türk Telekom Telefon Fatura Ödemesi",
+      "date": "2026-07-15T16:14:08.405Z",
+      "referenceNumber": "REF783782",
+      "id": "rDKEvOl"
+    }
+  ],
+  "bills": [
+    {
+      "id": "bill-1",
+      "subscriberNumber": "10293847",
+      "provider": "İSKİ Su",
+      "amount": 185.5,
+      "dueDate": "2026-07-20",
+      "isPaid": true
+    },
+    {
+      "id": "bill-2",
+      "subscriberNumber": "99281726",
+      "provider": "İGDAŞ Doğalgaz",
+      "amount": 750,
+      "dueDate": "2026-07-22",
+      "isPaid": true
+    },
+    {
+      "id": "bill-3",
+      "subscriberNumber": "44837261",
+      "provider": "Turkcell Ev İnterneti",
+      "amount": 299.9,
+      "dueDate": "2026-07-15",
+      "isPaid": true
+    },
+    {
+      "id": "bill-4",
+      "subscriberNumber": "55263718",
+      "provider": "Türk Telekom Telefon",
+      "amount": 149,
+      "dueDate": "2026-07-18",
+      "isPaid": true
+    }
+  ],
+  "investments": [
+    {
+      "id": "inv-1",
+      "userId": "3",
+      "assetType": "USD",
+      "amount": 5250,
+      "buyPrice": 32.25,
+      "date": "2026-06-28T11:30:00Z"
+    },
+    {
+      "id": "inv-2",
+      "userId": "3",
+      "assetType": "EUR",
+      "amount": 1850,
+      "buyPrice": 34.9,
+      "date": "2026-06-25T15:40:00Z"
+    },
+    {
+      "id": "inv-3",
+      "userId": "3",
+      "assetType": "GOLD",
+      "amount": 25.5,
+      "buyPrice": 2420,
+      "date": "2026-06-30T10:15:00Z"
+    }
+  ],
+  "rates": [
+    {
+      "id": "rate-usd",
+      "currency": "USD",
+      "name": "Amerikan Doları",
+      "buyPrice": 32.55,
+      "sellPrice": 32.75,
+      "change": 0.24
+    },
+    {
+      "id": "rate-eur",
+      "currency": "EUR",
+      "name": "Euro",
+      "buyPrice": 35.2,
+      "sellPrice": 35.45,
+      "change": -0.15
+    },
+    {
+      "id": "rate-gold",
+      "currency": "GOLD",
+      "name": "Altın (Gram)",
+      "buyPrice": 2465,
+      "sellPrice": 2490,
+      "change": 1.12
+    }
+  ],
+  "supportTickets": [
+    {
+      "id": "ticket-1",
+      "userId": "3",
+      "title": "Kredi Kartı Limit Artışı Hakkında",
+      "message": "Mevcut kartımın limitini 150.000 TL yapmak istiyorum, yardımlarınızı rica ederim.",
+      "status": "resolved",
+      "createdAt": "2026-07-08T15:20:00Z",
+      "responses": [
+        {
+          "sender": "staff",
+          "message": "hesaplarım bölümünde değiştirebilirsiniz",
+          "date": "2026-07-15T11:13:13.895Z"
+        },
+        {
+          "sender": "staff",
+          "message": "oldu mu",
+          "date": "2026-07-15T11:17:14.323Z"
+        },
+        {
+          "sender": "customer",
+          "message": "evet teşekkkür ederim",
+          "date": "2026-07-15T11:17:35.780Z"
+        },
+        {
+          "sender": "staff",
+          "message": "çözüldü",
+          "date": "2026-07-15T11:18:21.389Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-2",
+      "userId": "3",
+      "title": "Mobil Temassız Ödeme Hatası",
+      "message": "Kartımla temassız işlem yaparken hata alıyorum.",
+      "status": "resolved",
+      "createdAt": "2026-07-05T12:00:00Z",
+      "responses": [
+        {
+          "sender": "staff",
+          "message": "Merhaba Ahmet Bey, kartınızın temassız ödeme yetkisi açılmıştır. Bir sonraki temassız işleminizi şifreli yaparak aktifleştirebilirsiniz.",
+          "date": "2026-07-06T09:30:00Z"
+        },
+        {
+          "sender": "customer",
+          "message": "teşekkürler",
+          "date": "2026-07-15T11:17:51.783Z"
+        },
+        {
+          "sender": "staff",
+          "message": "çözüldü",
+          "date": "2026-07-15T11:18:28.172Z"
+        }
+      ]
+    },
+    {
+      "userId": "1783664755709",
+      "title": "limiti nereden arttıracağım",
+      "message": "yardım edin",
+      "status": "resolved",
+      "createdAt": "2026-07-15T12:18:00.046Z",
+      "responses": [
+        {
+          "sender": "staff",
+          "message": "kartlarım bölümünde limiti güncelle var orada bulunacaktır",
+          "date": "2026-07-15T12:18:42.607Z"
+        },
+        {
+          "sender": "customer",
+          "message": "çözüldü mü",
+          "date": "2026-07-15T12:24:58.590Z"
+        },
+        {
+          "sender": "staff",
+          "message": "çözüldü",
+          "date": "2026-07-15T12:25:14.478Z"
+        }
+      ],
+      "id": "HJjqlv3",
+      "unreadByStaff": false,
+      "unreadByCustomer": true
+    },
+    {
+      "userId": "3",
+      "title": "deneme",
+      "message": "newljbflewbgrege",
+      "status": "resolved",
+      "createdAt": "2026-07-15T12:40:43.010Z",
+      "responses": [
+        {
+          "sender": "staff",
+          "message": "deneme çözüldü",
+          "date": "2026-07-15T12:41:10.564Z"
+        }
+      ],
+      "unreadByStaff": false,
+      "unreadByCustomer": false,
+      "id": "E82eOxD"
+    }
+  ],
+  "systemLogs": [
+    {
+      "id": "log-1",
+      "message": "Sistem başlatıldı.",
+      "userId": "1",
+      "userRole": "admin",
+      "date": "2026-07-09T10:00:00Z"
+    },
+    {
+      "id": "log-2",
+      "message": "Ahmet Yılmaz giriş yaptı.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-09T12:30:00Z"
+    },
+    {
+      "id": "log-1783664755722",
+      "message": "Berna Nur İlbaş sisteme üye oldu ve hesapları tanımlandı.",
+      "userId": "1783664755709",
+      "userRole": "customer",
+      "date": "2026-07-10T06:25:55.722Z"
+    },
+    {
+      "message": "İSKİ Su faturası 185.5 TRY ödenmiştir.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T10:40:43.362Z",
+      "id": "UVhN18d"
+    },
+    {
+      "message": "İGDAŞ Doğalgaz faturası 750 TRY ödenmiştir.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T10:42:58.562Z",
+      "id": "FNH89gd"
+    },
+    {
+      "message": "Turkcell Ev İnterneti faturası 299.9 TRY ödenmiştir.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T10:43:02.331Z",
+      "id": "e9FDnUr"
+    },
+    {
+      "message": "Türk Telekom Telefon faturası 149 TRY ödenmiştir.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T10:43:09.921Z",
+      "id": "n5PsmJY"
+    },
+    {
+      "message": "TR98 0006 2000 0000 1000 2001 01 nolu hesaptan TR684649649649649613166849 nolu hesaba 5500 TRY transfer edildi (EFT).",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T10:47:20.880Z",
+      "id": "GdzQuRE"
+    },
+    {
+      "message": "Tatil Birikimi (TR98 0006 2000 0000 1000 1000 8085) hesabı kapatıldı.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T10:59:07.000Z",
+      "id": "LYJt69E"
+    },
+    {
+      "message": "TR98 0006 2000 0000 1000 2001 01 nolu hesaptan TR505161961663661988855231 nolu hesaba 10000 TRY transfer edildi (EFT).",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T11:10:51.088Z",
+      "id": "8EQ5xS9"
+    },
+    {
+      "message": "Zeynep Aslan (customer2) kullanıcısının hesabı bloke edildi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T11:12:40.507Z",
+      "id": "WiB5G1G"
+    },
+    {
+      "message": "Zeynep Aslan (customer2) kullanıcısının hesabı aktif edildi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T11:12:45.937Z",
+      "id": "l1DrzTn"
+    },
+    {
+      "message": "ticket-1 nolu destek talebine yanıt gönderildi ve çözümlendi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T11:13:13.936Z",
+      "id": "dqsS5Xj"
+    },
+    {
+      "message": "ticket-1 nolu destek talebine yanıt gönderildi ve çözümlendi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T11:17:14.369Z",
+      "id": "H_K2eAN"
+    },
+    {
+      "message": "Ahmet Yılmaz (customer) destek talebine yanıt gönderdi (ID: ticket-1).",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T11:17:35.838Z",
+      "id": "LfnCXYz"
+    },
+    {
+      "message": "Ahmet Yılmaz (customer) destek talebine yanıt gönderdi (ID: ticket-2).",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T11:17:51.850Z",
+      "id": "Nttxx7A"
+    },
+    {
+      "message": "ticket-1 nolu destek talebine yanıt gönderildi ve çözümlendi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T11:18:21.464Z",
+      "id": "dbDxW0N"
+    },
+    {
+      "message": "ticket-2 nolu destek talebine yanıt gönderildi ve çözümlendi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T11:18:28.231Z",
+      "id": "QBQxUA6"
+    },
+    {
+      "message": "Profil bilgileri güncellendi.",
+      "userId": "1",
+      "userRole": "customer",
+      "date": "2026-07-15T11:23:24.295Z",
+      "id": "UcVOduV"
+    },
+    {
+      "message": "Berna Nur İlbaş (bernailbas) kullanıcısının hesabı bloke edildi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T11:56:55.630Z",
+      "id": "KuhgH9M"
+    },
+    {
+      "message": "Berna Nur İlbaş (bernailbas) kullanıcısının hesabı aktif edildi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:00:31.014Z",
+      "id": "Pm3ttyR"
+    },
+    {
+      "message": "Berna Nur İlbaş (ilbasberna) kullanıcısı ve ilişkili 1 banka hesabı sistemden kalıcı olarak silindi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:00:40.417Z",
+      "id": "4QlEaWm"
+    },
+    {
+      "id": "log-1784116941446",
+      "message": "Nur  Demir sisteme üye oldu ve hesapları tanımlandı.",
+      "userId": "1784116941434",
+      "userRole": "customer",
+      "date": "2026-07-15T12:02:21.446Z"
+    },
+    {
+      "id": "log-1784117059395",
+      "message": "Cengiz Kurt sisteme üye oldu ve hesapları tanımlandı.",
+      "userId": "1784117059383",
+      "userRole": "customer",
+      "date": "2026-07-15T12:04:19.395Z"
+    },
+    {
+      "message": "Zeynep Aslan (customer2) kullanıcısının hesabı bloke edildi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:16:40.204Z",
+      "id": "5vDd5eD"
+    },
+    {
+      "message": "Zeynep Aslan (customer2) kullanıcısının hesabı aktif edildi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:16:45.474Z",
+      "id": "zfZMZ2D"
+    },
+    {
+      "message": "Zeynep Aslan (customer2) kullanıcısı ve ilişkili 1 banka hesabı sistemden kalıcı olarak silindi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:17:10.937Z",
+      "id": "mqDcs6w"
+    },
+    {
+      "message": "Berna Nur İlbaş (bernailbas) yeni destek talebi oluşturdu: limiti nereden arttıracağım",
+      "userId": "1783664755709",
+      "userRole": "customer",
+      "date": "2026-07-15T12:18:00.104Z",
+      "id": "wqm3rGg"
+    },
+    {
+      "message": "HJjqlv3 nolu destek talebine yanıt gönderildi ve çözümlendi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:18:42.663Z",
+      "id": "7gSpCjO"
+    },
+    {
+      "message": "Berna Nur İlbaş (bernailbas) destek talebine yanıt gönderdi (ID: HJjqlv3).",
+      "userId": "1783664755709",
+      "userRole": "customer",
+      "date": "2026-07-15T12:24:58.663Z",
+      "id": "BUbregN"
+    },
+    {
+      "message": "HJjqlv3 nolu destek talebine yanıt gönderildi ve çözümlendi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:25:14.510Z",
+      "id": "Rvj4ANz"
+    },
+    {
+      "message": "Yeni personel hesabı oluşturuldu: Arda Aydın (aydinarda)",
+      "userId": "1",
+      "userRole": "admin",
+      "date": "2026-07-15T12:30:47.955Z",
+      "id": "MTeSEi6"
+    },
+    {
+      "message": "Ahmet Yılmaz (customer) yeni destek talebi oluşturdu: deneme",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T12:40:43.054Z",
+      "id": "lVMtN-d"
+    },
+    {
+      "message": "E82eOxD nolu destek talebine yanıt gönderildi ve çözümlendi.",
+      "userId": "2",
+      "userRole": "staff",
+      "date": "2026-07-15T12:41:10.616Z",
+      "id": "MRNlmgH"
+    },
+    {
+      "message": "İGDAŞ Doğalgaz faturası 750 TRY ödenmiştir.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T16:13:57.091Z",
+      "id": "edoedfe"
+    },
+    {
+      "message": "Turkcell Ev İnterneti faturası 299.9 TRY ödenmiştir.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T16:14:04.432Z",
+      "id": "o44aqJB"
+    },
+    {
+      "message": "Türk Telekom Telefon faturası 149 TRY ödenmiştir.",
+      "userId": "3",
+      "userRole": "customer",
+      "date": "2026-07-15T16:14:08.438Z",
+      "id": "zso6eNg"
+    }
+  ],
+  "systemSettings": {
+    "transferFeeTRY": 5,
+    "eftFeeTRY": 12,
+    "fastFeeTRY": 8,
+    "interestRateTRY": 45,
+    "maintenanceMode": false
+  }
+}

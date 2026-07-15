@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Astra Bank Light Mode Palette */
+  --brand-bg: #f8fafc;
+  --brand-card: rgba(255, 255, 255, 0.8);
+  --brand-border: rgba(15, 23, 42, 0.06);
+  --brand-primary: #0f172a;       /* Navy Blue */
+  --brand-accent: #14b8a6;        /* Turquoise */
+  --brand-success: #22c55e;       /* Success Green */
+  --brand-danger: #ef4444;
+  --brand-warning: #f59e0b;
+  --brand-gold: #b45309;
+  --brand-text-primary: #0f172a;
+  --brand-text-secondary: #475569;
+  --brand-text-muted: #64748b;
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --backdrop-glow-1: rgba(20, 184, 166, 0.04); /* Turquoise glow */
+  --backdrop-glow-2: rgba(15, 23, 42, 0.02);  /* Navy glow */
+}
+
+.dark {
+  /* Astra Bank Dark Mode Palette (Matching Login Screen) */
+  --brand-bg: #070b13;
+  --brand-card: rgba(15, 23, 42, 0.45);
+  --brand-border: rgba(255, 255, 255, 0.09);
+  --brand-primary: #14b8a6;       /* Turquoise as primary in dark mode for contrast */
+  --brand-accent: #0f172a;        /* Navy as accent in dark mode */
+  --brand-success: #22c55e;       /* Success Green */
+  --brand-danger: #ef4444;
+  --brand-warning: #f59e0b;
+  --brand-gold: #d97706;
+  --brand-text-primary: #f8fafc;
+  --brand-text-secondary: #cbd5e1;
+  --brand-text-muted: #94a3b8;
+  --scrollbar-track: #070b13;
+  --scrollbar-thumb: #1e293b;
+  --backdrop-glow-1: rgba(20, 184, 166, 0.15);
+  --backdrop-glow-2: rgba(59, 130, 246, 0.1);
+}
+
+body {
+  background-color: var(--brand-bg);
+  color: var(--brand-text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Aura Background Effects */
+body::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--backdrop-glow-1) 0%, rgba(59, 130, 246, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(80px);
+  animation: float-aura-1 25s infinite alternate;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -10%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--backdrop-glow-2) 0%, rgba(16, 185, 129, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(80px);
+  animation: float-aura-2 30s infinite alternate;
+}
+
+@keyframes float-aura-1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-10%, 10%) scale(1.1); }
+}
+
+@keyframes float-aura-2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(10%, -10%) scale(1.15); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--brand-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--brand-border);
+  transition: background 0.3s ease, border 0.3s ease;
+}
