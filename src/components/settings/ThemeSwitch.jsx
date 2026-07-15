@@ -15,7 +15,7 @@ const ThemeSwitch = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-4 rounded-xl border border-white/5 bg-white/[0.005]">
+    <div className="flex items-center justify-between p-4 rounded-xl border border-brand-border bg-brand-primary/[0.01] dark:bg-white/[0.005]">
       <div className="text-left">
         <span className="text-xs font-bold text-brand-textPrimary block">{t('theme_preference', 'Tema Seçimi')}</span>
         <span className="text-[10px] text-brand-textMuted leading-relaxed block mt-0.5">
@@ -25,13 +25,13 @@ const ThemeSwitch = () => {
 
       <button
         onClick={handleToggle}
-        className="relative w-14 h-8 bg-white/5 border border-white/10 rounded-full p-1 transition-all duration-300 flex items-center cursor-pointer focus:outline-none"
+        className="relative w-14 h-8 bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 rounded-full p-1 transition-all duration-300 flex items-center cursor-pointer focus:outline-none"
       >
         {/* Sliding Dot */}
         <div 
-          className={`w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-white transition-all duration-300 ${theme === 'dark' ? 'translate-x-6 bg-indigo-600' : 'translate-x-0'}`}
+          className={`w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-white transition-all duration-300 ${theme === 'dark' ? 'translate-x-6 bg-[#14b8a6]' : 'translate-x-0'}`}
         >
-          {theme === 'dark' ? <Moon size={12} /> : <Sun size={12} />}
+          {theme === 'dark' ? <Moon size={12} className="text-[#070b13]" /> : <Sun size={12} className="text-white" />}
         </div>
       </button>
     </div>
