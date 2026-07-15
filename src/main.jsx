@@ -12,3 +12,12 @@ createRoot(document.getElementById('root')).render(
     </Provider>
   </StrictMode>,
 )
+if (!localStorage.getItem('theme')) {
+  localStorage.setItem('theme', 'dark');
+}
+
+if (localStorage.getItem('theme') === 'dark' || !('theme' in localStorage)) {
+  document.documentElement.classList.add('dark');
+} else {
+  document.documentElement.classList.remove('dark');
+}
